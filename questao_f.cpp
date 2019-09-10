@@ -9,10 +9,11 @@ using namespace std;
 int main()
 {
 	FILE * p_file;
-	char diretorio[80] = "C:\\Users\\Leonardo\\Desktop\\Atividade\\AlunosFap2019.txt";
+	char diretorio[80] = "C:\\Users\\leonardo.ribeiro-nub\\Desktop\\teste.txt";
 	char conteudo;
-	char vogal[5]= {'a', 'e', 'i', 'o', 'u'};
-	int num = 0, cont_vogal = 0, cont_consoante = 0,i = 0;
+	char vogais[] = {'a','e','i', 'o','u'};
+	char consoantes[] = {'b', 'c', 'd', 'f', 'g', 'h' ,'j' ,'k', 'l' ,'m', 'n' ,'p' ,'q','r' ,'s' ,'t', 'v', 'w' ,'x' ,'z'};
+	int cont_vogal = 0, cont_consoante = 0,i = 0;
 	p_file = fopen(diretorio, "r");
 	
 	
@@ -25,17 +26,21 @@ int main()
 		cout<<"-> Abrindo arquivo em: "<<diretorio<<endl;
 		while(fread(&conteudo, sizeof(char), 1, p_file))
 		{
-			if(vogal[i] == conteudo)
+			for(i = 0; i < 5; i++)
 			{
-				cont_vogal += 1;
-				cout<<vogal[i];
+				if(vogais[i] == conteudo)
+				{
+					cont_vogal++;
+				}	
 			}
-			else if(vogal[i] != conteudo && vogal[i] != '\n')
+			for(i = 0; i < 20; i++)
 			{
-				cont_consoante+=1;
+				if(consoantes[i] == conteudo)
+				{
+					cont_consoante++;
+				}
 				
 			}
-			i++;
 		}
 		
 		cout<<"\nNumero de vogais:"<<cont_vogal<<endl;
@@ -44,7 +49,5 @@ int main()
 	
 		fclose(p_file);
 	}
-	
-	
-		
+			
 }
