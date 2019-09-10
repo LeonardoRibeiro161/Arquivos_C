@@ -2,8 +2,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-//O programa deverá permitir a leitura de qualquer arquivo texto e imprimir o número de linhas que contém o arquivo.
-
+//O programa deverÃ¡ permitir a leitura de qualquer arquivo texto e imprimir o nÃºmero de linhas que contÃ©m o arquivo.
+//Ainda nao terminado
 using namespace std;
 
 int main()
