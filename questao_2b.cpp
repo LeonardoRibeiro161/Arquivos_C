@@ -12,7 +12,7 @@ int main()
 	char aux[100];
 	char diretorio[80] = "C:\\Users\\Leonardo\\Desktop\\AlunosFap2019.txt";
 	int i;
-	p_file = fopen(diretorio, "r");
+	p_file = fopen(diretorio, "rb");
 	
 	if(p_file == NULL)
 	{
@@ -31,6 +31,10 @@ int main()
 			if(conteudo[i] == 'a')
 			{
 				aux[i] = 'z';
+			}
+			else if(conteudo[i] == ' ' || conteudo[i] == '\n')
+			{
+				aux[i] = NULL;
 			}
 			else
 			{
