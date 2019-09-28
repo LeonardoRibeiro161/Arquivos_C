@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<string.h>
 /*
-O programa deverá permitir a exclusão de um determinado registro do arquivo “AlunosFap2019.txt” através da matricula.
+O programa deverÃ¡ permitir a exclusÃ£o de um determinado registro do arquivo â€œAlunosFap2019.txtâ€ atravÃ©s da matricula.
 */
 
 using namespace std;
@@ -33,8 +33,8 @@ int main()
 				if(conteudo[i] == ' ' || conteudo[i] == '\n')
 					cout<<char(conteudo[i]);
 				else
-					cout<<char(conteudo[i] + 3);
-					fputc(char(conteudo[i] + 3), p_file);
+					cout<<char(conteudo[i] + 1);
+					fputc(char(conteudo[i] + 1), p_file);
 			}
 		}
 		
