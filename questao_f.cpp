@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 //O programa deverá permitir a leitura de qualquer arquivo texto e imprimir o número de linhas que contém o arquivo.
-//Ainda nao terminado
+
 using namespace std;
 
 int main()
